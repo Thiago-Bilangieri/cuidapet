@@ -1,14 +1,21 @@
 import 'package:cuida_pet/app/modules/auth/auth_module.dart';
+import 'package:cuida_pet/app/modules/auth/login/login_module.dart';
+import 'package:cuida_pet/app/modules/home/home_module.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+
+import 'modules/core/core_module.dart';
 
 class AppModule extends Module {
   @override
-  // TODO: implement binds
   List<Bind<Object>> get binds => [];
 
   @override
-  // TODO: implement routes
+  List<Module> get imports => [
+        CoreModule(),
+      ];
+  @override
   List<ModularRoute> get routes => [
         ModuleRoute("/auth", module: AuthModule()),
+        ModuleRoute("/home", module: HomeModule()),
       ];
 }
