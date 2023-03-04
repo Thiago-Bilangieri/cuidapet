@@ -1,4 +1,4 @@
-import 'package:cuida_pet/app/helpers/environments.dart';
+import 'package:cuida_pet/app/core/helpers/environments.dart';
 import 'package:cuida_pet/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';

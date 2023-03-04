@@ -19,21 +19,21 @@ class UserModel {
   Map<String, dynamic> toMap() {
     return <String, dynamic>{
       'email': email,
-      'registerType': registerType,
-      'imgAvatar': imgAvatar,
+      'register_type': registerType,
+      'img_avatar': imgAvatar,
     };
   }
 
   factory UserModel.fromMap(Map<String, dynamic> map) {
     return UserModel(
       email: (map['email'] ?? '') as String,
-      registerType: (map['registerType'] ?? '') as String,
-      imgAvatar: (map['imgAvatar'] ?? '') as String,
+      registerType: (map['register_type'] ?? '') as String,
+      imgAvatar: (map['img_avatar'] ?? '') as String,
     );
   }
 
   String toJson() => json.encode(toMap());
 
   factory UserModel.fromJson(String source) =>
-      UserModel.fromMap(json.decode(source) as Map<String, dynamic>);
+      UserModel.fromMap(json.decode(source));
 }
